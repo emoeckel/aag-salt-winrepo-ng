@@ -12,6 +12,7 @@ wireshark:
     {% if grains['cpuarch'] == 'AMD64' %}
     installer:   '{{source_path}}/Wireshark-latest-x64.msi'
     uninstaller: '{{source_path}}/Wireshark-latest-x64.msi'
+    {% endif %}
     install_flags:   '/qn /norestart'
     uninstall_flags: '/qn /norestart'
     msiexec: True
