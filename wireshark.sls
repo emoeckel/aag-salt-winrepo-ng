@@ -4,15 +4,11 @@
 # Npcap: https://nmap.org/npcap/
 # AAG - Latest Wireshark and only AMD64/win64 support.
 
-{% set source_path = 'https://www.wireshark.org/download/win64' %}
-
 wireshark:
   latest:
     full_name: 'Wireshark'
-    {% if grains['cpuarch'] == 'AMD64' %}
-    installer:   '{{source_path}}/Wireshark-latest-x64.msi'
-    uninstaller: '{{source_path}}/Wireshark-latest-x64.msi'
-    {% endif %}
+    installer:   'https://www.wireshark.org/download/win64/Wireshark-latest-x64.msi'
+    uninstaller: 'https://www.wireshark.org/download/win64/Wireshark-latest-x64.msi'
     install_flags:   '/qn /norestart'
     uninstall_flags: '/qn /norestart'
     msiexec: True
