@@ -5,7 +5,7 @@
 # AAG - Latest Wireshark and only AMD64/win64 support.
 
 wireshark:
-  latest:
+  '4.2.4.0':
     full_name: 'Wireshark'
     installer:   'https://www.wireshark.org/download/win64/Wireshark-latest-x64.msi'
     uninstaller: 'https://www.wireshark.org/download/win64/Wireshark-latest-x64.msi'
