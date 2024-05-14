@@ -22,7 +22,7 @@ wireshark:
   '{{ version }}.0':
     full_name: 'Wireshark'
     installer:   '{{source_path}}/Wireshark-latest-x64.msi'
-    uninstaller: 'https://www.wireshark.org/download/win64/Wireshark-{{ version }}-x64.msi'
+    uninstaller: '{{source_path}}/Wireshark-latest-x64.msi'
     install_flags:   '/qn /norestart'
     uninstall_flags: '/qn /norestart'
     msiexec: True
