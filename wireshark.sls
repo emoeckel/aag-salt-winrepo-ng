@@ -23,10 +23,11 @@ wireshark:
   {% for version in msiVersions %}
   '{{ version }}.0':
     full_name: 'Wireshark'
-    installer:   '{{source_path}}/Wireshark-{{ version }}-x64.msi.msi'
-    uninstaller: '{{source_path}}/Wireshark-{{ version }}-x64.msi.msi'
+    installer:   '{{source_path}}/Wireshark-{{ version }}-x64.msi'
+    uninstaller: '{{source_path}}/Wireshark-{{ version }}-x64.msi'
     install_flags:   '/qn /norestart'
     uninstall_flags: '/qn /norestart'
     msiexec: True
     locale: en_US
     reboot: False
+  {% endfor %}
