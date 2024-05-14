@@ -17,12 +17,14 @@
   '2.4.16', '2.4.15', '2.4.14', '2.4.13', '2.4.12', '2.4.11', '2.4.10', '2.4.9', '2.4.8', '2.4.7', '2.4.6', '2.4.5', '2.4.4', '2.4.3', '2.4.2', '2.4.1', '2.4.0'
 ] %}
 
+
+
 wireshark:
   {% for version in msiVersions %}
   '{{ version }}.0':
     full_name: 'Wireshark'
-    installer:   '{{source_path}}/Wireshark-latest-x64.msi'
-    uninstaller: '{{source_path}}/Wireshark-latest-x64.msi'
+    installer:   '{{source_path}}/Wireshark-{{ version }}-x64.msi.msi'
+    uninstaller: '{{source_path}}/Wireshark-{{ version }}-x64.msi.msi'
     install_flags:   '/qn /norestart'
     uninstall_flags: '/qn /norestart'
     msiexec: True
